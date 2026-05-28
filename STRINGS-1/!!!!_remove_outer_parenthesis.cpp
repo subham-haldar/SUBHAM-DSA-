@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std ; 
+class Solution {
+public:
+    string removeOuterParentheses(string s) {
+        // Initialize result string
+        string result = "";  
+        // Initialize nesting level counter
+        int level = 0;       
+
+        // Traverse the string
+        for (char ch : s) {
+            // If we encounter '(', increase the level
+            if (ch == '(') {
+                // If we're inside a primitive, add '(' to result
+                if (level > 0) result += ch;
+                // Increase the nesting level for '('
+                level++;  
+            } 
+            // If we encounter ')', decrease the level
+            else if (ch == ')') {
+                // Decrease the nesting level for ')'
+                level--;  
+                // If we're inside a primitive, add ')' to result
+                if (level > 0) result += ch;
+            }
+        } 
+        return result;                    // TC = O(N) SC is near about O(n) if we consider the storing  of the ans else it is O(1)
+    }  
+};
