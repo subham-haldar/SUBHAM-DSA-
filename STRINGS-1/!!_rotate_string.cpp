@@ -18,7 +18,7 @@ int main() {
 
    return 0 ;
 }    // SC = O(N) as we are doubling the length of the string 
-     // TC = O(N) for the loop part then O(N*N) in worst case for the find operation and if the find uses linear time it will be O(N) time if the find uses linear time
+     // TC = O(N) for the loop part then O(N*N) in worst case for the find operation and it will be O(N) time if the find uses linear time
      
 
 // s length = 2n
