@@ -65,7 +65,7 @@ for(int i = 0; i < n; i++) {
     }
 }
 
-return ans.substr(1);
+return ans.substr(1);    // print the substring from idx = 0 till idx = len()-1
   }
 };
 
