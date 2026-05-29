@@ -35,3 +35,41 @@ int main() {
 // Some library implementations use more optimized algorithms, but for interview/DSA analysis we usually assume:
 
 // Worst-case Time: O(n²)
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:                                                       // THIS IS THE BRUTE FORCE , GENERATE ALL SUBSTRING OF LEFT ROTATIONS AND COMPARE 
+    // Check if 'goal' is a rotation of 's'                   // TC = O(N*N)   sc = o(n) to store the generated string 
+    bool rotateString(string& s, string& goal) {
+        // Strings must be same length to be rotations of each other
+        if (s.length() != goal.length()) {
+            return false;
+        }
+        // Try all possible rotations of 's'
+        for (int i = 0; i < s.length(); i++) {
+            string rotated = s.substr(i) + s.substr(0, i);  
+            if (rotated == goal) {
+                return true;
+            }
+        }
+        return false;
+    }
+};
+
+int main() {
+    Solution sol;
+    string s = "rotation";
+    string goal = "tionrota";
+    
+    // Output the result
+    if (sol.rotateString(s, goal)) {
+        cout << "true" << endl;  
+    } else {
+        cout << "false" << endl;
+    }
+
+    return 0;
+ }
