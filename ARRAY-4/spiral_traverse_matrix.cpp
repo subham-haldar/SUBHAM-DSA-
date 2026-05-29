@@ -38,7 +38,7 @@ public:
                 for (int i = bottom; i >= top; i--) {
                     ans.push_back(matrix[i][left]);
                 }
-                left++;
+                left++;                            // TC = O(M*N) and SC = O(1)
             }
         }
 
