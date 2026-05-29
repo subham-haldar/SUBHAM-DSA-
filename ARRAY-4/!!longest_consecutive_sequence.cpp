@@ -1,36 +1,33 @@
-// #include<bits/stdc++.h>
-// using namespace std;
+#include<bits/stdc++.h>
+using namespace std;
 
 
-// ///  BETTER SOLUTION - TC = O (NLONG) + O(N) sc = O(1)
-// class Solution {
-// public:
-//     int longestConsecutive(vector<int>& nums) {
-//         if(nums.size()==0) return 0 ; 
-//         sort(nums.begin(),nums.end());
-//         int current_len = 1;
-//         int longest_len = 1 ; 
-//         int last_smaller = INT_MIN ; 
-//         for(int i = 0 ; i<nums.size() ; i++){
-//             if(last_smaller == nums[i]-1) {
-//                     current_len +=1 ; 
-//                     last_smaller = nums[i];
-//             }
-//             else if (last_smaller !=nums[i]){
-//                 current_len = 1 ;
-//                 last_smaller = nums[i];
-//             }
-//         longest_len = max(longest_len,current_len);
-//        }
-//     return longest_len ; 
-//       }
-//    };
+///  BETTER SOLUTION - TC = O (NLONG) + O(N) sc = O(1)
+class Solution {
+public:
+    int longestConsecutive(vector<int>& nums) {
+        if(nums.size()==0) return 0 ; 
+        sort(nums.begin(),nums.end());
+        int current_len = 1;
+        int longest_len = 1 ; 
+        int last_smaller = INT_MIN ; 
+        for(int i = 0 ; i<nums.size() ; i++){
+            if(last_smaller == nums[i]-1) {
+                    current_len +=1 ; 
+                    last_smaller = nums[i];
+            }
+            else if (last_smaller !=nums[i]){
+                current_len = 1 ;
+                last_smaller = nums[i];
+            }
+        longest_len = max(longest_len,current_len);
+       }
+    return longest_len ; 
+      }
+   };
 
 
 // STRIVER SOLUTION   TC = o(n) sc = o(n) worst case 
-
-#include <bits/stdc++.h>
-using namespace std;
 
 class Solution {
 public:
