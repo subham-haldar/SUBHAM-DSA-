@@ -15,10 +15,10 @@ public:
           if(s[idx]=='-') sign = -1 ;
           idx +=1 ;
        }
-       while(idx < s.length() && s[idx]>='0' && s[idx]<='9') {      // check for the 
-        // append the digits to make the number 
-        num = num * 10 + (s[idx]-'0') ; 
-        // check the overflow case 
+       while(idx < s.length() && s[idx]>='0' && s[idx]<='9') {      // check for the letter is either bethween 0 and 9
+          // append the digits to make the number 
+        num = num * 10 + (s[idx]-'0') ;  // this s[idx]-'0' stores the actual value 
+         // check the overflow case 
         if(num > INT_MAX) {
             if(sign == 1 ) return INT_MAX;
             return INT_MIN;
