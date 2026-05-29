@@ -51,7 +51,7 @@ int main(){
     vector<int>nums{1,2,3,1,1,1,1,3,3};
     int target = 6 ;
     int maxlen = 0 ; 
-    long long sum = nums[0] ;
+    long long sum = nums[0] ; // i start my sum with the first element 
     int i = 0 , j = 0 ; 
     while(i<nums.size()){
          while(j<=i && sum>target) {
