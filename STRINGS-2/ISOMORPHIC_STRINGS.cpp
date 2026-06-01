@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std ; 
 class Solution {
-public:                                                    // SC = O(2N) worst case in case of unique mapping of every element
+public:                                                    // SC = O(26*2) worst case in case of unique mapping of every element
     bool isIsomorphic(string s, string t) {                // and TIME COMPLEXITY = O(N) 
         unordered_map<char, char> mp1;
         unordered_map<char, char> mp2;

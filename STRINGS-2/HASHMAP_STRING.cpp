@@ -16,3 +16,19 @@ int main(){
 // for(auto it : mpp ){
 //     if(it.second == tgt ) return true ; 
 // }
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    map<pair<int,int>, int> mp;
+
+    mp[{1, 2}] = 10;
+    mp[{3, 4}] = 20;
+
+    cout << mp[{1, 2}] << endl; // 10
+    cout << mp[{3, 4}] << endl; // 20
+}
+
+map<pair<int,int>, int> mp;
