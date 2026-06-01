@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std ; 
-class solution {
-public :
+class solution {         // OPTIMAL SOLUTION   TC = O(N)  SC = O(N) because new strings created 
+public :                 // BRUTE FORCE SOLUTION - REMOVE EVERY ELEMENT AND CHECK IF THERE IS PALINDROME , TC = O(N*N)
     bool validpalindrome(string s) {
         int l = 0 ; 
         int r = s.length()-1 ; 
