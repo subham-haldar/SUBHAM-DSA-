@@ -41,3 +41,35 @@ public:
 
 // BRUTE FORCE , TC = O(N*N*N)  SC = O(2n)
 // generate all substring and compare for palindrome
+class solution {
+public:
+bool isPalindrome(string str) {
+    int l = 0;
+    int r = str.length() - 1;
+
+    while(l < r) {
+        if(str[l] != str[r])
+            return false;
+
+        l++;
+        r--;
+    }
+
+    return true;
+}
+
+string longestpalindromicsubstring(string s){
+string ans = "";
+
+for(int i = 0; i < s.length(); i++) {
+    for(int j = i; j < s.length(); j++) {
+
+        string sub = s.substr(i, j - i + 1);
+
+        if(isPalindrome(sub) && sub.length() > ans.length()) {
+            ans = sub;
+        }
+    }
+   }
+ }
+};
