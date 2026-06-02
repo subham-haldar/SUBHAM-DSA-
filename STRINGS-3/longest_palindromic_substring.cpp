@@ -43,7 +43,7 @@ public:
 // generate all substring and compare for palindrome
 class solution {
 public:
-bool isPalindrome(string str) {
+bool isPalindrome(string str) { 
     int l = 0;
     int r = str.length() - 1;
 
