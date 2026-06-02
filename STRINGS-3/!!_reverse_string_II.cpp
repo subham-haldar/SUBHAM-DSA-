@@ -17,3 +17,7 @@ public:
 // see the logic is check if after the i th element , 
 // k elements accour or not , if yes take them in acoount else reverse till end and
 // after updating the i , it will not fulfill the condition of loop
+
+
+// I ACTUALLY REMOVED THE CONCEPT OF >K , <2K 
+// i just said i have to reverse k elements then move to i+k and do the same untill i cant have more k elements after i 
