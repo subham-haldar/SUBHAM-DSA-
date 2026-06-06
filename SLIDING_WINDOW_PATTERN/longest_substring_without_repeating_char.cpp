@@ -24,7 +24,7 @@ public:
     }
 };
 
-// OPTIMAL SOLUTION TC = O(n) SC=O(1) 
+// OPTIMAL SOLUTION TC = O(n) SC=O(256) worst case 
 
 class Solution {
 public:
