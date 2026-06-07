@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std ; 
 int main(){               // UNIQUE ELEMENTS (do it for duplicate as well)
-     vector<int>nums{4,4,5,6,0,0,1,2,2};
+     vector<int>nums{4,4,5,6,0,0,0,1,1,2,2};
      int ans = INT_MAX; 
      int low = 0 ; 
      int high = nums.size()-1;
@@ -20,7 +20,7 @@ int main(){               // UNIQUE ELEMENTS (do it for duplicate as well)
             high = mid - 1 ;  
         }
      }
-     cout<<ans ;  // TC = LOG(N)              THE FOLLOW UP FOR THIS IS HOW MANY TIMES THE ARRAY IS SORTED , THE ANS IS THE INDEX OF THE MIN ELEMENT (do the same for duplicate )
+     cout<<ans ;  // TC = LOG(N)              THE FOLLOW UP FOR THIS IS HOW MANY TIMES THE ARRAY IS SORTED , THE ANS IS THE INDEX OF THE MIN ELEMENT appearing for the first time (do the same for duplicate )
     return 0 ; 
 }
 
